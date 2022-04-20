@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+	<meta charset="utf-8"/>
+	<title>Formularz dot. aktywoności fizycznej</title>
+	<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+	<h1> Formularz dotyczący aktywości fizycznej </h1>
+		<form action="presonal.php" method="post" autocomplete="off">
+			<fieldset>
+			
+				<legend> Dane personalne </legend>
+				<div class="dziel">
+				Imię: <input type="text" name="imie"><br/>
+				Nazwisko: <input type="text" name="nazwisko"><br/>
+				Data urodzenia: <input type="date" name="data_u"></br>
+				</div>
+				<div class="dziel">
+				Adres e-mail: <input type="email" name="mail" required="required"></br>
+				Aktualna waga: <input type="number" name="waga" min="20" max="200"></br>
+				</div>
+			</fieldset>
+			
+			<fieldset>
+				<legend> Płeć </legend>
+				<label> <input type="radio" name="plec" value="k"> kobieta </label>
+				<label> <input type="radio" name="plec" value="m"> mężczyzna </label>
+			</fieldset>
+			
+			<fieldset>
+				<legend> Jaki rodzaj sportu najbardziej Cię interesuje? </legend>
+				<div class="dziel">
+				<input type="checkbox" name="sport" value="gz"> Gry zespołowe </br>
+				<input type="checkbox" name="sport" value="l"> Joga </br>
+				<input type="checkbox" name="sport" value="t"> Bieganie </br>
+				<input type="checkbox" name="sport" value="f"> Siłownia </br>
+				<input type="checkbox" name="sport" value="m"> Pływanie </br>
+				</div>
+				<div class="dziel">
+				<input type="checkbox" name="sport" value="p"> CrossFit </br>
+				<input type="checkbox" name="sport" value="w"> Sporty walki </br>
+				<input type="checkbox" name="sport" value="r"> Jazda na rowerze </br>
+				<input type="checkbox" name="sport" value="i"> Inny <input type="text" name="inne" placeholder="(jaki?)"</br>
+				</div>
+			</fieldset>
+			
+			<fieldset>
+				<legend> Jak często uprawiasz sport? </legend>
+				<select name="czest">
+				<option value="jed">1-2 razy w tygodniu</option>
+				<option value="trz">3-5 razy w tygodniu</option>
+				<option value="kilm"selected>Kilka razy w miesiącu</option>
+				<option value="kilr"selected>Kilka razy w roku</option>
+				<option value="wog">W ogóe nie uprawiam sportu</option>
+				</select>
+			</fieldset>
+			
+			<fieldset>
+				<legend> Czy dbasz o swoje nawodnienie, wypijając co najmniej 2 lirty płynów dziennie? </legend>
+				<input type="radio"> Tak </br>
+				<input type="radio"> Nie </br>
+				</select>
+			</fieldset>
+			
+			<fieldset>
+				<legend> O której godzinie się budzisz? </legend>
+				<input type="time"> </br>
+				<legend> O której godzinie chodzisz spać? </legend>
+				<input type="time">
+			</fieldset>
+			
+			<fieldset>
+				<legend> Czy często chodzisz na spacery? </legend>
+				<input type="radio"> Tak </br>
+				<input type="radio"> Nie </br>
+				</select>
+			</fieldset>
+			
+			<fieldset>
+				<legend> Jaki jest Twój tryb pracy? </legend>
+				<select name="praca" multiple="multiple">
+				<option value="ak">Aktywny, praca fizyczna</option>
+				<option value="pa">Pasywny, praca siedząca</option>
+				<option value="akpa">Aktywno-pasywny</option>
+				<option value="brakp">Bez pracy</option>
+				<option value="wtra">W trakcie szukania zajęcia</option></br>
+				</select>
+			</fieldset>
+			
+			<fieldset>
+				<legend> Na koniec </legend>
+					<textarea name="komentarz" cols="150" placeholder="Opisz jak wygląda Twój typowy dzień"></textarea>
+			</fieldset>
+			
+			<fieldset>
+				<input type="submit" value="Wyślij formularz">
+				<input type="reset" value="Usuń dane formularza">
+			</fieldset>
+			
+			<style>
+				h1 {text-align:center; letter-spacing:1.5px; text-decoration: underline}
+				legend  {color:black; font-weight:600 ; font-variant:small-caps; letter-spacing:1px; font-size:20px;}
+				body {padding: 5px 60px; font-size: 17px; text-align:left-side; background: url('css/stretching.jpg')}
+				fieldset {border-radius:10px; border-width:8px; border-color:#168B8D; background: transparent}
+				input {margin-top:5px; border-radius:10px; cursor:pointer; padding:8px 15px}
+				::selection {background:#33CCCC}
+				.dziel {display:inline-block; margin:10px}
+				input[type="checkbox"]:checked {outline:4px inset #1DA4A4}
+				input[type="text"] {cursor:text}
+				
+			</style>
+			
+			
+		</form>
+	</body>
+	
+</html>
